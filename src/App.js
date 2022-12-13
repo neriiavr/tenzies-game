@@ -3,19 +3,26 @@ import './index.css';
 import Dice from'./Dice.js';
 
 export default function App() {
+  function allNewDice() {
+      const newDice = []
+      for (let i = 0; i < 10; i++) {
+          newDice.push(Math.ceil(Math.random() * 6))
+      }
+      return newDice
+  }
   return (
     <main>
     <div className="dice-container">
-        <Dice name="1" />
-        <Dice name="2" />
-        <Dice name="3" />
-        <Dice name="4" />
-        <Dice name="5" />
-        <Dice name="5" />
-        <Dice name="6" />
-        <Dice name="1" />
-        <Dice name="2" />
-        <Dice name="3" />
+        <Dice value="1" />
+        <Dice value="2" />
+        <Dice value="3" />
+        <Dice value="4" />
+        <Dice value="5" />
+        <Dice value="5" />
+        <Dice value="6" />
+        <Dice value="1" />
+        <Dice value="2" />
+        <Dice value="3" />
     </div>
     </main>
   );
